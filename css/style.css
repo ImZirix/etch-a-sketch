@@ -1,0 +1,84 @@
+:root {
+    --grid-width: 350px;
+    --accent-color: #04aa6d;
+    --inactive-color:rgb(0, 0, 0, 0.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+.container {
+    margin: 0 auto;
+    width: var(--grid-width);
+
+}
+
+.top {
+    display: flex;
+    background-color: white;
+    width: var(--grid-width);
+    margin-bottom: 6px;
+    margin-top: 10px;
+    padding: 3px;
+    color: var(--inactive-color);
+    width: fit-content;
+
+}
+
+#gridToggle {
+    cursor: pointer;
+}
+
+#sketchArea {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px auto 0 auto;
+    background-color: white;
+}
+
+.cell {
+    border: 1px solid whitesmoke;
+}
+
+#slider {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 25px;
+    width: 100%;
+    background: rgba(200, 255, 238, 0.726);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+#sliderValue {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: var(--accent-color);
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: var(--accent-color);
+    cursor: pointer;
+}
